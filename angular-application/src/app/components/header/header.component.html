@@ -1,25 +1,29 @@
-<div class="menu-btn">
+<div
+  class="menu-btn"
+  (click)="onClose()"
+  [ngClass]="{ close: this.close === true }"
+>
   <div class="btn-line"></div>
   <div class="btn-line"></div>
   <div class="btn-line"></div>
 </div>
 
-<nav class="menu">
-  <div class="menu-branding">
+<nav class="menu" [ngClass]="{ show: this.close === true }">
+  <div class="menu-branding" [ngClass]="{ show: this.close === true }">
     <div class="portrait"></div>
   </div>
-  <ul class="menu-nav">
-    <li class="nav-item">
+  <ul class="menu-nav" [ngClass]="{ show: this.close === true }">
+    <li class="nav-item" [ngClass]="{ show: this.close === true }">
       <a routerLink="/home" class="nav-link">
         Home
       </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" [ngClass]="{ show: this.close === true }">
       <a routerLink="/projects" class="nav-link">
         Project
       </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" [ngClass]="{ show: this.close === true }">
       <a routerLink="/contact" class="nav-link">
         Contact
       </a>

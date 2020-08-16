@@ -1,5 +1,45 @@
+@import "_config.scss";
+
 app-header {
   position: fixed;
   z-index: 2;
   width: 100%;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    @include easeOut;
+  }
+
+  //rotate into x with menu line
+
+  &.close {
+    transform: rotate(1.5turn);
+
+    .btn-line {
+      // Line 1
+      &:nth-child(1) {
+        transform: rotate(-45deg) translate(-10px, 10px);
+      }
+      // Line 2 -hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      // Line 1
+      &:nth-child(3) {
+        transform: rotate(45deg) translate(-1px, -2px);
+      }
+    }
+  }
 }
