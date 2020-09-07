@@ -1,0 +1,13 @@
+app-footer {
+  color: set-text-color($primary-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  position: absolute;
+  display: block;
+  .main-footer {
+    background-color: $secondary-Color;
+    padding: 1rem;
+  }
+}

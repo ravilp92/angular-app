@@ -12,21 +12,22 @@
   <div class="menu-branding" [ngClass]="{ show: this.close === true }">
     <div class="portrait"></div>
   </div>
-  <ul class="menu-nav" [ngClass]="{ show: this.close === true }">
+  <ul
+    class="menu-nav"
+    [ngClass]="{ show: this.close === true }"
+    (click)="onClose()"
+  >
     <li class="nav-item current" [ngClass]="{ show: this.close === true }">
-      <a routerLink="/home" class="nav-link">
-        Home
-      </a>
+      <a routerLink="/home" class="nav-link"> Home </a>
     </li>
     <li class="nav-item" [ngClass]="{ show: this.close === true }">
-      <a routerLink="/projects" class="nav-link">
-        Project
-      </a>
+      <a routerLink="/about" class="nav-link"> About </a>
     </li>
     <li class="nav-item" [ngClass]="{ show: this.close === true }">
-      <a routerLink="/contact" class="nav-link">
-        Contact
-      </a>
+      <a routerLink="/projects" class="nav-link"> Project </a>
+    </li>
+    <li class="nav-item" [ngClass]="{ show: this.close === true }">
+      <a routerLink="/contact" class="nav-link"> Contact </a>
     </li>
   </ul>
 </nav>
